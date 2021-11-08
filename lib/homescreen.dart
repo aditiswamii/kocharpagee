@@ -22,8 +22,10 @@ class Homescreen extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: const Color.fromRGBO(160, 209, 249, 50),
-            toolbarHeight: 100,
+            leadingWidth: 314,
+            toolbarHeight: 80,
             title: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                children: [
                  Container(
                      padding: EdgeInsets.only(right:5.0),
@@ -32,7 +34,7 @@ class Homescreen extends StatelessWidget {
                        onTap: () {
                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>  Notifications()));
                        },
-                   child: Image.asset('assets/notification.png',width: 20,color: Colors.indigo,height:40),
+                   child: Image.asset('assets/notification.png',width:40,color: Colors.indigo,height:40),
                     ),
                  ),
               Container(
@@ -42,7 +44,7 @@ class Homescreen extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Profile()));
                         },
-                 child: Image.asset('assets/place_user.png',width: 20,height:40)
+                 child: Image.asset('assets/place_user.png',width:40,height:40)
                 ),
               )
             ]
@@ -53,14 +55,14 @@ class Homescreen extends StatelessWidget {
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  text: ("News"),
+                  child: Text("News",style:TextStyle(color:Colors.black)),
                 ),
 
                 Tab(
-                  text: ("Activity"),
+                  child: Text("Activity",style:TextStyle(color:Colors.black)),
                 ),
                 Tab(
-                  text: ("History"),
+                  child: Text("History",style:TextStyle(color:Colors.black)),
                 )
               ],
             ),
@@ -69,6 +71,7 @@ class Homescreen extends StatelessWidget {
           body: TabBarView(
 
             children: [
+
                const New(),
                const Active(),
               History()
