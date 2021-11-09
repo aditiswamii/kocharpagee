@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kocherpage/history.dart';
@@ -53,9 +55,11 @@ class Homescreen extends StatelessWidget {
 
 
             bottom: const TabBar(
+              physics: NeverScrollableScrollPhysics(),
               tabs: [
                 Tab(
                   child: Text("News",style:TextStyle(color:Colors.black)),
+
                 ),
 
                 Tab(

@@ -1,6 +1,6 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(const New());
 }
@@ -10,6 +10,7 @@ class New extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return  SingleChildScrollView(
      child: Column(
 
@@ -17,9 +18,9 @@ mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
 
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.fromLTRB(30, 30, 30,20),
                     padding: const EdgeInsets.all(10),
-                    constraints:  const BoxConstraints.expand(height: 300.0),
+                    constraints:  const BoxConstraints.expand(height: 450.0),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.blue,
@@ -60,16 +61,16 @@ mainAxisSize: MainAxisSize.min,
                   ),
 
                   Container(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.fromLTRB(30,10, 30,20),
                     padding: const EdgeInsets.all(10),
-                    constraints:  const BoxConstraints.expand(height: 300.0),
+                    constraints:  const BoxConstraints.expand(height: 450.0),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.blue,
                         width:1,
                       ),
                     ),
-                    height: 250,
+                    height: 200,
                     width: 340,
                     child: ListView(
                           scrollDirection: Axis.vertical,
@@ -81,12 +82,12 @@ mainAxisSize: MainAxisSize.min,
                             ),
                           ),
                           tileColor: Colors.lightBlueAccent,),
-                        ListTile(leading:  Icon(Icons.person),
-                            title: Text('Rajat Arora',)),
+                        ListTile(leading:  Icon(Icons.person,),
+                            title: Text('Rajat Arora')),
                         ListTile(leading:  Icon(Icons.local_phone),title: Text('9876543210')),
-                        ListTile(leading:  Icon(Icons.location_on),title: Text('Sector 4,House no.11,Mp Colony,Bikaner',
+                        ListTile(leading:  Icon(Icons.location_on),title: Text('Sector 4,House no.11,Mp Colony,Bikaner'
                             )),
-                        ListTile(title: Text("Remark:",style: TextStyle(color:Colors.black)),
+                        ListTile(title: Text("Remark:",style: TextStyle(color:Colors.black,)),
 
                             subtitle: Text("Lorem Ipsum is simply dummy text of the printing "
                                 "and typesetting industry. Lorem Ipsum has been the "
