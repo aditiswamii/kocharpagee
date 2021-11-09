@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kocherpage/homescreen.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -30,9 +31,11 @@ class _State extends State<Notifications> {
           backgroundColor: Colors.blue[200],
           leading: Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.only(right: 5.0),
+            padding: EdgeInsets.only(left: 5.0),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Homescreen()));
+              },
               child:  Icon(Icons.arrow_back_ios,color: Colors.black87,size: 40),
             ),
           ),

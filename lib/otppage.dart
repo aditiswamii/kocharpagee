@@ -30,12 +30,12 @@ class _State extends State<MyOtp> {
           backgroundColor: const Color.fromRGBO(160, 209, 249, 50),
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(80, 10, 80, 0),
+              padding: const EdgeInsets.fromLTRB(80, 40, 80, 0),
 
               child: Flexible(
                 child:Align(
                   alignment: Alignment.bottomCenter,
-                  child: Image.asset('assets/otp_banner.png',height: 200,width: 230),
+                  child: Image.asset('assets/otp_banner.png',height: 170,width: 200),
                 ),
               ),
             ),
@@ -101,7 +101,7 @@ class _State extends State<MyOtp> {
                     )
                 ),
                 Container(
-                  padding: const EdgeInsets.fromLTRB(150, 10, 150, 80),
+                  padding: const EdgeInsets.fromLTRB(100, 10, 100, 80),
                   child:ElevatedButton(
 
                     style: ElevatedButton.styleFrom(
@@ -111,7 +111,7 @@ class _State extends State<MyOtp> {
                       alignment: Alignment.center,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32.0)),
-                      fixedSize: const Size(30,20),
+                      fixedSize: const Size(80,40),
                       //////// HERE
                     ),
                     onPressed: () {

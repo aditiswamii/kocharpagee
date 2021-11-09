@@ -70,6 +70,7 @@ flutter:
     - assets/otp_banner.png
     - assets/neo.png
     - assets/notification.png
+    - assets/calendar.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

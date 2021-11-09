@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kocherpage/homescreen.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -25,12 +26,14 @@ class _State extends State<Profile> {
       appBar: AppBar(
         toolbarHeight: 220,
         backgroundColor: Color.fromRGBO(160, 209, 249, 50),
-        title: Container(
-          padding: EdgeInsets.fromLTRB(10, 5, 200,150),
-          child: const Align(
-            alignment: Alignment.topLeft,
-
-            child: Icon(Icons.arrow_back_ios,color: Colors.white,size: 40),
+        leading: Container(
+          alignment: Alignment.topLeft,
+          padding: EdgeInsets.only(left: 5.0),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Homescreen()));
+            },
+            child:  Icon(Icons.arrow_back_ios,color: Colors.white,size: 40),
           ),
         ),
           actions: <Widget>[

@@ -19,9 +19,12 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
+          extendBodyBehindAppBar: false,
+          backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: const Color.fromRGBO(160, 209, 249, 50),
             leadingWidth: 314,
@@ -34,9 +37,9 @@ class Homescreen extends StatelessWidget {
                          alignment: Alignment.centerRight,
                   child: GestureDetector(
                        onTap: () {
-                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>  Notifications()));
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Notifications()));
                        },
-                   child: Image.asset('assets/notification.png',width:40,color: Colors.indigo,height:40),
+                   child: Image.asset('assets/notification.png',width:40,color: Color.fromRGBO(60,137,209,50),height:40),
                     ),
                  ),
               Container(
@@ -55,15 +58,14 @@ class Homescreen extends StatelessWidget {
 
 
             bottom: const TabBar(
-              physics: NeverScrollableScrollPhysics(),
               tabs: [
                 Tab(
-                  child: Text("News",style:TextStyle(color:Colors.black)),
+                  child: Text("New",style:TextStyle(color:Colors.black)),
 
                 ),
 
                 Tab(
-                  child: Text("Activity",style:TextStyle(color:Colors.black)),
+                  child: Text("Active",style:TextStyle(color:Colors.black)),
                 ),
                 Tab(
                   child: Text("History",style:TextStyle(color:Colors.black)),
@@ -72,12 +74,12 @@ class Homescreen extends StatelessWidget {
             ),
           ),
 
-          body: TabBarView(
+          body: const TabBarView(
 
             children: [
 
-               const New(),
-               const Active(),
+               New(),
+               Active(),
               History()
             ],
           ),
